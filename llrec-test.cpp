@@ -45,11 +45,13 @@ Node* readList(const char* filename)
 
 void print(Node* head)
 {
+		int cnt = 0;
     while(head) {
         cout << head->val << " ";
         head = head->next;
+				cnt++;
     }
-    cout << endl;
+    cout << " (" << cnt << ")" << endl;
 }
 
 void dealloc(Node* head)
@@ -86,7 +88,36 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
+    // Node* one = new Node;
+    // one->val = 1;
+    // Node* two = new Node;
+    // two->val = 2;
+    // Node* three = new Node;
+    // three->val = 4;
+    
+    
+    
+    
+    // one->next = two;
+    // two->next = three;
+    // three->next = NULL;
 
+    
+    
+    // Node* head = one;
+		Node* smaller = NULL;
+		Node* larger = NULL;
+		
+		llpivot (head, smaller, larger, 1);
+
+		cout << "LL-Pivot list small: ";
+    print(smaller);
+		cout << "LL-Pivot list large: ";
+
+		    print(larger);
+	cout << "LL-Pivot list head: ";
+	print(head);
+    
 
 
     
